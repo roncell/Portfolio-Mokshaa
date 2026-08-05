@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+:root {
+  --paper: #f5efe4;
+  --paper-raised: #fbf8f1;
+  --ink: #211d17;
+  --ink-soft: #5c564c;
+  --ink-faint: #948c7d;
+  --accent: #b3491f;
+  --accent-soft: #e8c6ac;
+  --moss: #5f6b47;
+  --plum: #5c4a68;
+  --ochre: #a97a22;
+  --line: #ddd1ba;
+}
+
+@theme inline {
+  --color-paper: var(--paper);
+  --color-paper-raised: var(--paper-raised);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-ink-faint: var(--ink-faint);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-moss: var(--moss);
+  --color-plum: var(--plum);
+  --color-ochre: var(--ochre);
+  --color-line: var(--line);
+  --font-display: var(--font-fraunces);
+  --font-sans: var(--font-inter);
+}
+
+* {
+  border-color: var(--line);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-sans);
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--paper-raised);
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.underline-accent {
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 4px;
+}
+
+/* swipeable rails: no visible scrollbar, touch/trackpad + arrow buttons */
+.rail {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.rail::-webkit-scrollbar {
+  display: none;
+}
