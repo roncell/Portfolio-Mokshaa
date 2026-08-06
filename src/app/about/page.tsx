@@ -24,26 +24,18 @@ export default function AboutPage() {
           </ul>
         </div>
 
-        <aside className="flex flex-col gap-6">
-          <div className="aspect-[4/5] w-full max-w-xs rounded-sm border border-line bg-[linear-gradient(160deg,var(--accent-soft)_0%,var(--paper-raised)_55%,var(--moss)_140%)]" />
-          <p className="max-w-xs text-xs leading-relaxed text-ink-faint">
-            Portrait placeholder &mdash; swap this block for a photo of
-            Mokshaa.
+        <aside className="border-t border-line pt-8 lg:border-t-0 lg:pt-0">
+          <p className="text-xs uppercase tracking-[0.2em] text-ink-faint">
+            Beats
           </p>
-
-          <div className="mt-4 border-t border-line pt-6">
-            <p className="text-xs uppercase tracking-[0.2em] text-ink-faint">
-              Beats
-            </p>
-            <ul className="mt-4 flex flex-col gap-3">
-              {beats.map((beat) => (
-                <li key={beat.slug}>
-                  <p className="font-display text-lg italic text-ink">{beat.name}</p>
-                  <p className="text-sm text-ink-soft">{beat.tagline}</p>
-                </li>
-              ))}
-            </ul>
-          </div>
+          <ul className="mt-4 flex flex-col gap-3">
+            {beats.map((beat) => (
+              <li key={beat.slug}>
+                <p className="font-display text-lg italic text-ink">{beat.name}</p>
+                <p className="text-sm text-ink-soft">{beat.tagline}</p>
+              </li>
+            ))}
+          </ul>
         </aside>
       </div>
     </div>
